@@ -5,14 +5,14 @@ import About from './components/About';
 import Home from './components/Home';
 import Tech from './components/Tech';
 import Contact from './components/Contact';
-import ElloBot from './components/Interface';
+import Interface from './components/Interface';
 import Navvy from './Navbar';
 import {Route,Link} from 'react-router-dom';
 function App() {
   return (
     <>
     <Navvy/>
-    <Route exact path="/ElloBot" component={ElloBot}/>
+    <Route exact path="/Interface" component={Interface}/>
     <Route exact path="/" component={Home}/>
     <Route exact path="/About" component={About}/>
     <Route exact path="/Tech" component={Tech}/>
