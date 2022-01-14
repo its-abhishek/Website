@@ -1,11 +1,14 @@
 import react from "react";
-
-function ElloBot(){
+import '../style/Interface.css';
+function Interface(){
     return(
-        <div className="Hi">
-            <h1>Hello ElloBot</h1>
-        </div>
+        <form>
+            <label>Query:</label>
+            <textarea className="Query" rows={5}></textarea>
+            <br></br>
+            <button className="Submit" type="submit">Submit</button>
+        </form>
     );
 }
 
-export default ElloBot;
+export default Interface;
