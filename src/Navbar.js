@@ -5,6 +5,7 @@ import '../src/style/Navbar.css';
 function Navvy(){
     return(
         <nav className="navbar">
+            <div className="gradient"></div>
             <h className="headernav">Weal</h>
             <ul>
                 <li><Link className="start" to="/Contact" style={{ textDecoration: 'none' }}>Contact</Link></li>
