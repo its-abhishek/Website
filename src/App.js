@@ -5,7 +5,7 @@ import About from './components/About';
 import Home from './components/Home';
 import Tech from './components/Tech';
 import Contact from './components/Contact';
-import ElloBot from './components/ElloBot';
+import ElloBot from './components/Interface';
 import Navvy from './Navbar';
 import {Route,Link} from 'react-router-dom';
 function App() {
