@@ -1,11 +1,11 @@
 import react from "react";
 
-function Tech(){
+function Blog(){
     return(
         <div className="Hi">
-            <h1>Tech</h1>
+            <h1>Hello About</h1>
         </div>
     );
 }
 
-export default Tech;
+export default Blog;
