@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import '../style/SignIn.css';
 
 function SignUp() {
         return (
@@ -21,9 +22,9 @@ function SignUp() {
                     <input type="password" className="Password" placeholder="Enter password" />
                 </div>
 
-                <button type="submit" className="btn btn-primary btn-block">Sign Up</button>
+                <button type="submit" className="btn btn-primary btn-block">SIGN UP</button>
                 <p className="forgot-password text-right">
-                    Already registered <a href="#">sign in?</a>
+                    <a href="#">Already registered sign in?</a>
                 </p>
             </form>
         );
