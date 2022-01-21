@@ -11,7 +11,7 @@ function Contact(){
                 </div>
 
                 <div className="form-group">
-                    <label>Password</label>
+                    <label>Password:</label>
                     <input type="password" className="Password" placeholder="Enter password" />
                 </div>
 
@@ -22,9 +22,9 @@ function Contact(){
                     </div>
                 </div>
 
-                <button type="submit" className="btn btn-primary btn-block">Submit</button>
+                <button type="submit" className="btn btn-primary btn-block">SUBMIT</button>
                 <p className="forgot-password text-right">
-                    Forgot <a href="#">password?</a>
+                    <a href="#">Forgot Password?</a>
                 </p>
             </form>
         );
