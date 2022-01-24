@@ -3,22 +3,22 @@ import '../style/SignIn.css';
 
 function SignUp() {
         return (
-            <form>
-                <h3>Sign Up</h3>
+            <form className="form">
+                <h3 className="h3">Sign Up</h3>
 
                 <div className="form-group">
-                    <label>Your User ID: </label>
+                    <label className="label">Your User ID: </label>
                     <input type="text" className="UserID" placeholder="#" disabled />
                 </div>
 
 
                 <div className="form-group">
-                    <label>Enter Password:</label>
+                    <label className="label">Enter Password:</label>
                     <input type="password" className="Password" placeholder="Enter Password" />
                 </div>
 
                 <div className="form-group">
-                    <label>Re-Enter Password:</label>
+                    <label className="label">Re-Enter Password:</label>
                     <input type="password" className="Password" placeholder="Enter password" />
                 </div>
 

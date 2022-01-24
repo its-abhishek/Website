@@ -1,17 +1,17 @@
-form {
+.form {
     align-items: center;
     text-align: center;
     width: 100%;
     margin-top: 200px;
 }
-h3{
+.h3{
     color: white;
 }
-form>div{
+.form-group{
     padding: 10px;
 }
 
-label {
+.label {
     color: rgb(196, 96, 179);
     padding-left:26px;
     width:170px;
@@ -20,7 +20,13 @@ label {
     text-align: left;
 }
 
-input {
+.UserID {
+    padding: 3px 10px;
+}
+.Password {
+    padding: 3px 10px;
+}
+.custom-control-input {
     padding: 3px 10px;
 }
 

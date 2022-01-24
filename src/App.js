@@ -17,9 +17,6 @@ function App() {
     <Route exact path="/Blog" component={Blog}/>
     <Route exact path="/SignUP" component={SignUP}/>
     <Route exact path="/SignIn" component={SignIn}/>
-    <Route exact path="/" component={Home}/>
-
-
     </>
   );
 }

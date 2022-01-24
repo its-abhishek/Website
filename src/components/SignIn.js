@@ -1,17 +1,17 @@
 import React, { Component } from "react";
-
+import '../style/SignIn.css';
 function Contact(){
         return (
-            <form>
-                <h3>Sign In</h3>
+            <form className="form">
+                <h3 className="h3">Sign In</h3>
 
                 <div className="form-group">
-                    <label>User ID:</label>
+                    <label className="label">User ID:</label>
                     <input type="text" className="UserID" placeholder="Enter Id" />
                 </div>
 
                 <div className="form-group">
-                    <label>Password:</label>
+                    <label className="label">Password:</label>
                     <input type="password" className="Password" placeholder="Enter password" />
                 </div>
 

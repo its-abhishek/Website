@@ -3,13 +3,17 @@ import '../style/Interface.css';
 function Interface(){
     return(
         <form>
-            <label>Query for the Counsellor:</label>
+            <div className="cont">
+            <label className="label1">Query for the Counsellor:</label>
             <textarea className="Query" rows={5}></textarea>
+            </div>
             <br></br>
-            <label>Anonymous Confession:</label>
+            <div className="cont">
+            <label className="label2">Anonymous Confession:</label>
             <textarea className="Confession" rows={5}></textarea>
+            </div>
             <br></br>
-            <button className="Submit" type="submit">Submit</button>
+            <button className="finish" type="submit">Submit</button>
         </form>
     );
 }
