@@ -1,7 +1,24 @@
 import React, { Component } from "react";
+import Login from "./Login";
+import Logout from "./Logout";
+import { useEffect } from "react";
+import { gapi } from "gapi-script";
 import '../style/SignIn.css';
-function Contact(){
-        return (
+const clientId = process.env.GOOGLE_CLIENT_ID
+const Contact=()=>{
+    useEffect(()=>{
+        function start(){
+            gapi.client.init({
+                clientId:{clientId},
+                scope:""
+            })
+        }
+        gapi.load("client:auth2",start)
+    })
+    const google = ()=>{
+        window.open("http://localhost:5000/auth/google","_self")
+    }
+        return (<div>
             <form className="form">
                 <h3 className="h3">Sign In</h3>
 
@@ -26,7 +43,12 @@ function Contact(){
                 <p className="forgot-password text-right">
                     <a href="#">Forgot Password?</a>
                 </p>
+                <h4>OR</h4>
+                <hr />
+                <div onClick={google} className="custom-control-label">Google</div>
+                {/* <Logout/> */}
             </form>
+            </div>
         );
     }
 
