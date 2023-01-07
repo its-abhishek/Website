@@ -1,33 +1,65 @@
-import React, { Component } from "react";
-import '../style/SignIn.css';
-function Contact(){
-        return (
-            <form className="form">
-                <h3 className="h3">Sign In</h3>
+import React, { useState } from "react";
+import { useRouter } from "next/router";
+import { useSession, signIn } from "next-auth/react";
 
-                <div className="form-group">
-                    <label className="label">User ID:</label>
-                    <input type="text" className="UserID" placeholder="Enter Id" />
-                </div>
+import { BsGoogle } from "react-icons/bs";
 
-                <div className="form-group">
-                    <label className="label">Password:</label>
-                    <input type="password" className="Password" placeholder="Enter password" />
-                </div>
+const providers = [
+  {
+    name: "google",
+    Icon: BsGoogle,
+  },
+];
 
-                <div className="form-group">
-                    <div className="custom-control custom-checkbox">
-                        <input type="checkbox" className="custom-control-input" id="customCheck1" />
-                        <label className="custom-control-label" htmlFor="customCheck1">Remember me</label>
-                    </div>
-                </div>
+const Signin = () => {
+  const { data: session, status } = useSession();
+  const { push } = useRouter();
+  const [email, setEmail] = useState("");
 
-                <button type="submit" className="btn btn-primary btn-block">SUBMIT</button>
-                <p className="forgot-password text-right">
-                    <a href="#">Forgot Password?</a>
-                </p>
-            </form>
-        );
-    }
+  console.log(session);
+  if (status === "loading")
+    return <Heading>Checking Authentication...</Heading>;
 
-export default Contact;
+  if (session) {
+    setTimeout(() => {
+      push("/");
+    }, 1000);
+
+    return <Heading>you are signed in</Heading>;
+  }
+
+  const handleOAuthSignIn = (provider) => () => signIn(provider);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!email) return false;
+
+    signIn("email", { email, redirect: false });
+  };
+
+  return (
+    <Box>
+      <div
+        className="Logintext"
+        style={{
+          position: "absolute",
+          width: "363px",
+          height: "55px",
+          left: "66px",
+          top: "201px",
+          fontFamily: "'Poppins'",
+          fontStyle: "normal",
+          fontWeight: "400",
+          fontSize: "24px",
+          lineHeight: "72px",
+          color: "#646464",
+        }}
+      >
+        Please Login to your account
+      </div>
+    </Box>
+  );
+};
+
+export default Signin;
